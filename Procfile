@@ -1,1 +1,1 @@
-web: sh mvn compile exec:java
+worker: sh mvn compile exec:java
