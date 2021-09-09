@@ -1,1 +1,1 @@
-worker: sh mvn compile exec:java
+worker: mvn compile exec:java
