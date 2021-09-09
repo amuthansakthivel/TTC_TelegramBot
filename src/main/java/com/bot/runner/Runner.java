@@ -9,5 +9,6 @@ public class Runner {
     public static void main(String[] args) throws TelegramApiException {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
         telegramBotsApi.registerBot(new TTCBot());
+        System.out.println("Bot started to work");
     }
 }
