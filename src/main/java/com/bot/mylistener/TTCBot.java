@@ -23,14 +23,21 @@ public class TTCBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-               sendMessage(update);
+        sendMessage(update);
     }
 
     private void sendMessage(Update update) {
         Message message = update.getMessage();
         String text = message.getText().toLowerCase();
-        boolean isMatch = Stream.of("looking for a job", "job opening", "job","openings"
-        ,"hiring","immediate joiner","recruitment").map(String::toLowerCase).anyMatch(text::contains);
+        boolean isMatch = Stream.of("looking for a job",
+                "job opening",
+                "job","openings",
+                "hiring",
+                "immediate joiner"
+                ,"recruitment"
+                ,"open position"
+                ,"years experience"
+                ,"years of experience").map(String::toLowerCase).anyMatch(text::contains);
 
         if(isMatch){
             sendMessageBackToServer(update);
