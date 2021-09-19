@@ -30,7 +30,7 @@ public class TTCBot extends TelegramLongPollingBot {
         Message message = update.getMessage();
         String text = message.getText().toLowerCase();
         boolean isMatch = Stream.of("looking for a job", "job opening", "job","openings"
-        ,"hiring","immediate joiner","recruitment").anyMatch(text::contains);
+        ,"hiring","immediate joiner","recruitment").map(String::toLowerCase).anyMatch(text::contains);
 
         if(isMatch){
             sendMessageBackToServer(update);
