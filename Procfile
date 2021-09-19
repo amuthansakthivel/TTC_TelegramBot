@@ -1,1 +1,1 @@
-worker: mvn compile exec:java
+worker: java -jar .\target\TTCBot-1.0-SNAPSHOT-jar-with-dependencies.jar
