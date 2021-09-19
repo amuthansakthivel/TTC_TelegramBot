@@ -37,7 +37,9 @@ public class TTCBot extends TelegramLongPollingBot {
                 ,"recruitment"
                 ,"open position"
                 ,"years experience"
-                ,"years of experience").map(String::toLowerCase).anyMatch(text::contains);
+                ,"years of experience"
+                ,"any opening"
+                ,"any openings").map(String::toLowerCase).anyMatch(text::contains);
 
         if(isMatch){
             sendMessageBackToServer(update);
